@@ -4,11 +4,55 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<title>Cliente</title>
 </head>
 <body>
 
-	<h1>chamou...</h1>
+	<h1>Cliente</h1>
+	
+	<form method="post" action="adicionarClientes">
+		<label for="nome">Nome</label>
+		<input type="text" name="nome" id="nome"><br>
+		<label for="nome">Rua</label>
+		<input type="text" name="ruaNroComp" id="ruaNroComp"><br>
+		<label for="nome">Bairro</label>
+		<input type="text" name="bairro" id="bairro"><br>
+		<label for="nome">Cidade</label>
+		<input type="text" name="cidade" id="cidade"><br>
+		
+		<input type="submit" value="adicionar">
+	
+	</form>
+	
+	<h2>Lista de Clientes</h2>
+	
+ 	<table>
+	  <thead>
+	    <tr>
+	      <th>Nome</th>
+	      <th>Endereco</th>
+	    </tr>
+	  </thead>
+	  <tfoot>
+	    <tr>
+	      <td>Nome</td>
+	      <td>Endereco</td>
+	    </tr>
+	  </tfoot>
+	  <tbody>
+	  
+	  <c:forEach var="c" items="${clientes}">
+	  
+	    <tr>  
+		      <td>${c.nome}</td>
+		      <td>${c.ruaNroComp}</td>
+	    </tr>
+	   
+	  </c:forEach> 	
+	
+	  </tbody>
+	</table>
 
 </body>
 </html>
