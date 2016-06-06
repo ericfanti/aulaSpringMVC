@@ -15,7 +15,7 @@ public class ClienteController {
 		
 		System.out.println("Chamou o controlador");
 		
-		return "cliente";
+		return "forward:listaClientes";
 		
 	}
 	
@@ -29,7 +29,7 @@ public class ClienteController {
 		
 		if(retorno){
 			
-			return "cliente";
+			return "forward:listaClientes";
 		}
 		
 		else{

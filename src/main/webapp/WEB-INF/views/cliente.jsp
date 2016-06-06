@@ -30,12 +30,14 @@
  	<table>
 	  <thead>
 	    <tr>
+	      <td>Código</td>
 	      <th>Nome</th>
 	      <th>Endereco</th>
 	    </tr>
 	  </thead>
 	  <tfoot>
 	    <tr>
+	      <td>Código</td>
 	      <td>Nome</td>
 	      <td>Endereco</td>
 	    </tr>
@@ -44,7 +46,7 @@
 	  
 	  <c:forEach var="c" items="${clientes}">
 	  
-	    <tr>  
+	    <tr>  <td>${c.codigo}</td>
 		      <td>${c.nome}</td>
 		      <td>${c.ruaNroComp}</td>
 	    </tr>
